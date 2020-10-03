@@ -1,0 +1,27 @@
+T=int(input()) #intializing the test cases
+if(1<=T<=10) ==True: #checking the number
+    for i in range(1,T+1): #put it in range
+        g,p=map(int,input().split( )) #split the cost of balloons
+        cost1=0 #intial cost of a balloon1
+        cost2=0 #intial cost of a balloon2
+        n=int(input()) #taking the number of peoples are present
+        if (1<=n<=10) == True: #checking the number of peoples
+            for j in range(1,n+1): #taking the numers between 1 and  0
+                k,l=map(int,input().split( ))
+                if((k==1) and (l==1)):
+                    cost1 += (g+p)
+                    cost2 += (g+p)
+                elif((k==1) and (l==0)):
+                    cost1 += g
+                    cost2 += p
+                elif((k==0) and (l==1)):
+                    cost1 += p
+                    cost2 += g
+                else:
+                    pass
+            print(min(cost1,cost2)) #taking the minimum cost for te ballons
+        else:
+            pass
+        
+else:
+    pass
